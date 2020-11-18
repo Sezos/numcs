@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face expression recognition</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div id="main">
+    <div id="controls">
+      <button onclick="start()">Эхлэх</button>
+      <button id="trackingToggle" onclick="toggleTrackingVisibility()">Тракинг унтраах</button>
+    </div>
+    <div id="video_player">
+      <video id="video" width="720" height="560" autoplay muted></video>
+      <div class="loader">
+        <svg class="circular">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10"></circle>
+        </svg>
+      </div>
+    </div>
+    <p id="status"></p>
+  </div>
+</body>
+
+</html>
